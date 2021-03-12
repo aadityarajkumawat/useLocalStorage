@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useLocalStorage = (stateToPersist) => {
+const useLocalStorage = (stateToPersist, key) => {
   const [localState, setLocalState] = useState(stateToPersist);
 
   if (typeof stateToPersist === "undefined") {
@@ -46,7 +46,7 @@ const useLocalStorage = (stateToPersist) => {
   let depType = isObjectType ? JSON.stringify(localState) : localState;
 
   useEffect(() => {
-    const storedState = JSON.parse(sessionStorage.getItem("state"));
+    const storedState = JSON.parse(sessionStorage.getItem(key));
 
     if (storedState) {
       if (isObjectType && !(localState instanceof Array)) {
@@ -77,7 +77,7 @@ const useLocalStorage = (stateToPersist) => {
   }, []);
 
   useEffect(() => {
-    sessionStorage.setItem("state", JSON.stringify(localState));
+    sessionStorage.setItem(key, JSON.stringify(localState));
   }, [depType]);
 
   return [localState, setLocalState];
