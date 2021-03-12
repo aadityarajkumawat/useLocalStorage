@@ -1,0 +1,29 @@
+{
+  "name": "use-local-storage",
+  "version": "1.0.0",
+  "description": "A simple hook to persist local state saving it in browsers local storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadityarajkumawat/useLocalStorage.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "javascript",
+    "custom-hooks"
+  ],
+  "author": "Aditya Raj Kumawat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aadityarajkumawat/useLocalStorage/issues"
+  },
+  "homepage": "https://github.com/aadityarajkumawat/useLocalStorage#readme",
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
